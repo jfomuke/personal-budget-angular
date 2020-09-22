@@ -10,16 +10,21 @@
 <body>
 
     <div class="menu">
-        <ul>
+        <!-- This is an A11y Change -->
+        <!-- ul to Nav bar to become a landmark (tabbable) -->
+        <!-- https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412 -->
+        <nav>
             <li><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
-        </ul>
+            <li><a href="/pb/about.html">About</a></li>
+            <li><a href="/pb/login.html">Login</a></li>
+            <li><a href="https://google.com" >Google</a></li>
+        </nav>
     </div>
 
     <div class="hero">
-        <h1>Personal Budget</h1>
+        <!-- This is an SEO Change -->
+        <!-- I added keywords to the header1 to increase searches for "college students" and "finance" -->
+        <h1>Personal Finance Budget for College Students</h1>
         <h2>A personal-budget management app</h2>
     </div>
 
@@ -27,14 +32,17 @@
 
         <div class="page-area">
 
-            <div class="text-box">
-                <h1>Stay on track</h1>
-                <p>
-                    Do you know where you are spending your money? If you really stop to track it down,
-                    you would get surprised! Proper budget management depends on real data... and this
-                    app will help you with that!
-                </p>
-            </div>
+            <!-- This is a Semantic HTML Change -->
+            <section>
+                <div class="text-box">
+                    <h1>Stay on track</h1>
+                    <p>
+                        Do you know where you are spending your money? If you really stop to track it down,
+                        you would get surprised! Proper budget management depends on real data... and this
+                        app will help you with that!
+                    </p>
+                </div>
+            </section>
     
             <div class="text-box">
                 <h1>Alerts</h1>
