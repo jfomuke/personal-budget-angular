@@ -10,15 +10,13 @@
 <body>
 
     <div class="menu">
-        <!-- This is an A11y Change -->
-        <!-- ul to Nav bar to become a landmark (tabbable) -->
-        <!-- https://medium.com/alistapart/writing-html-with-accessibility-in-mind-a62026493412 -->
-        <nav>
+        
+        <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/pb/about.html">About</a></li>
             <li><a href="/pb/login.html">Login</a></li>
             <li><a href="https://google.com" >Google</a></li>
-        </nav>
+        </ul>
     </div>
 
     <div class="hero">
@@ -102,6 +100,10 @@
         </div>
 
     </div>
+
+    <!-- This is an A11y Change -->
+    <!-- The button's CSS is above 44px as per canvas video -->
+    <button type="button">Click Me! I do nothing!</button>
 
     <div class="bottom">
         <div class="center">
