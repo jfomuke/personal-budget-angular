@@ -2,6 +2,9 @@ const express = require('express');
 const app  = express();
 const port = 3000;
 
+const dataLink = require("./info.json"); 
+  
+
 app.use('/', express.static('public'));
 
 const budget = {
@@ -26,7 +29,8 @@ app.get('/hello', (req,res) => {
 });
 
 app.get('/budget', (req,res) => {
-    res.json(budget);
+    console.log(dataLink);
+    res.json(dataLink);
 });
 
 app.listen(port, () => {
