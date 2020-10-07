@@ -1,11 +1,12 @@
+// Budget API
 const express = require('express');
+const cors = require('cors');
 const app  = express();
 const port = 3000;
-
 const dataLink = require("./info.json"); 
-  
 
-app.use('/', express.static('public'));
+// Currently CORS is completely open - modify to a whitelist if necesary. 
+app.use(cors());
 
 const budget = {
     myBudget: [
@@ -24,9 +25,6 @@ const budget = {
 ]
 };
 
-app.get('/hello', (req,res) => {
-    res.send('Hello World');
-});
 
 app.get('/budget', (req,res) => {
     console.log(dataLink);
@@ -34,5 +32,5 @@ app.get('/budget', (req,res) => {
 });
 
 app.listen(port, () => {
-    console.log('Example app listening at http://localhost:${port}')
+    console.log('API listening at http://localhost:${port}')
 });
