@@ -20,6 +20,10 @@ const routes: Routes = [
       component: LoginComponent
     },
     {
+      path: 'contact',
+      component: LoginComponent
+    },
+    {
       path: '**',
       component: P404Component
     }
